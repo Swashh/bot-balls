@@ -4,7 +4,7 @@
 const TelegramApi = require("node-telegram-bot-api");
 const { handleBallSizeCommand, handleStartCommand } = require("./commands");
 
-const token = "6909916014:AAF0ImuIxzCm-cg1F0y2hq1-tp8yO4LCUr4"; // Используйте ваш токен
+const token = process.env.TELEGRAM_TOKEN;
 const bot = new TelegramApi(token, { polling: true });
 
 bot.setMyCommands([
